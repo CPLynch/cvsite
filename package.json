@@ -1,10 +1,10 @@
 {
   "name": "azureapp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/lynch8888/cvsite/issues"
   },
-  "homepage": "https://github.com/lynch8888/cvsite#readme"
+  "homepage": "https://github.com/lynch8888/cvsite#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
