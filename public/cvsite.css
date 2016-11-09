@@ -110,7 +110,7 @@ footer{
 
 
  
-@media only screen and (max-device-width: 640px) {
+@media(max-device-width: 640px) {
 
 body{
 	margin:0;
