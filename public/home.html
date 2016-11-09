@@ -12,103 +12,127 @@
 		
 		<nav>
 			<ul>
-				<a href='#about'><li>About</li></a>
-				<a href='#abilities'><li>Abilities</li></a>
-				<a href='#education'><li>Education</li></a>
-				<a href='#work'><li>Work Examples</li></a>
-				<a href='#notes'><li>Notes</li></a>
-				<a href='#contact'><li>Contact</li></a>
+				<a href='#about'><li id='about'>About</li></a>
+				<a href='#abilities'><li id='abilities'>Abilities</li></a>
+				<a href='#education'><li id='education'>Education</li></a>
+				<a href='#work'><li id='work'>Work Examples</li></a>
+				<a href='#notes'><li id='notes'>Notes</li></a>
+				<a href='#contact'><li id='contact'>Contact</li></a>
 			</ul>
 		</nav>
 		
 		<div id='bottomizer'>
-			<a href='#about'><div id='down_scroller'><img src='chevron-down.png' alt='Scroll Down' height='80px'></div></a>
+			<a href='#about'><div id='down_scroller'><img src='chevron-down-light.png' alt='Scroll Down'></div></a>
 		</div>
 	</div>
 	
 	<div id='container'>
-	
-		<a><h2 id='aboutScrollTo'>About</h2></a>
-		<p>Thanks for taking a look at my online resume.</p>
-		<p>Hello, I'm Charlie. I am a Junior Developer that specialises in Javascript and Node.js.
-		I am capable of breaking down the big problems into simple manageable tasks, of reading others
-		code, and have the soft skills to work well in a team. I learn fast and am confident that I will
-		add value to a company as a Junior Developer.
-		</p>
+		<div class='headline_container'>
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='aboutScrollTo'>About</h2></a>
+		</div>
+		<div class='content_section' id='about_content_section'>
+			<p>Thanks for taking a look at my online resume.</p>
+			<p>Hello, I'm Charlie. I am a Junior Developer that specialises in Javascript and Node.js.
+			I am capable of breaking down the big problems into simple manageable tasks, of reading others
+			code, and have the soft skills to work well in a team. I learn fast and am confident that I will
+			add value to a company as a Junior Developer.
+			</p>
 
- am capable of solving simple problems by myself. I can break problems into smaller, more manageable problems,
- which I can deal with on my own. I’m comfortable reading code I didn’t write, and I’m comfortable working on
- a team, knowing I won’t step on anyone’s toes, and if I do, I know how to work it out with them. This is something 
- I 100% believe, and while I might not know [whatever buzzword], I feel confident I will add value to a company – 
- and learning [whatever buzzword] is something I am willing to do if I need to.	
- 
-		<a><h2 id='abilitiesScrollTo'>Abilities</h2></a>
-		<p>Things I know:</p>
-		<ul>
-			<li>HTML5, HTML4/XHTML</li>
-			<li>CSS3</li>
-			<li>SASS</li>
-			<li>Javascript</li>
-			<li>Node.js</li>
-			<li>MYSQL</li>
-			<li>Git</li>
-			<li>HTTP</li>
-			<li>AJAX</li>
-		</ul>
+	 am capable of solving simple problems by myself. I can break problems into smaller, more manageable problems,
+	 which I can deal with on my own. I’m comfortable reading code I didn’t write, and I’m comfortable working on
+	 a team, knowing I won’t step on anyone’s toes, and if I do, I know how to work it out with them. This is something 
+	 I 100% believe, and while I might not know [whatever buzzword], I feel confident I will add value to a company – 
+	 and learning [whatever buzzword] is something I am will,ng to do if I need to.	
+	 
+			I'm Charlie, I like to develop web apps in Javascript. I have a sound base of 
+			knowledge that covers both the front end and back end. I am a fan of node and want 
+			to work on challenging projects using it.
+			</div>
+
 		
-		<p>Things I've dabbled in:</p>
-		<ul>
-			<li>MongoDB</li>
-			<li>ES6</li>
-			<li>JQuery</li>
-			<li>Bootstrap</li>
-			<li>React</li>
-		</ul>
+		<div class='headline_container'>
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='abilitiesScrollTo'>Abilities</h2></a>
+		</div>
 		
-		
-		<a><h2 id='educationScrollTo'>Education</h2></a>
-		
-		<p><span class='bold'>Open University:</span> BSc Computing and IT (2016 - Present Part-time)</p>
-		<p><span class='bold'>University of Bath:</span> BSc Natural Sciences [Biochem Major] (2014-2016, Only first year completed)</p>
-		<p><span class='bold'>Bedford Sixth Form:</span> A-levels A*A*A/A (2012-2014)</p>
-		
-		
-		<a><h2 id='workScrollTo'>Work Examples</h2></a>
-		
-		<a href='http://grabellastud.co.uk' target='_blank'><span class='underline'><p>Small Business Webpage</p></span><img src='newTab.png' alt='New tab' width='16px' height='16px' style='margin:25px 0 0 10px'><a>
+		<div class='content_section' id='abilities_content_section'>
+			<p>Things I know:</p>
+			<ul>
+				<li>HTML5, HTML4/XHTML</li>
+				<li>CSS3</li>
+				<li>SASS</li>
+				<li>Javascript</li>
+				<li>Node.js</li>
+				<li>MYSQL</li>
+				<li>Git</li>
+				<li>HTTP</li>
+				<li>AJAX</li>
+			</ul>
 			
-			
-		<a><h2 id='notesScrollTo'>Notes</h2></a>
+			<p>Things I've dabbled in:</p>
+			<ul>
+				<li>MongoDB</li>
+				<li>ES6</li>
+				<li>JQuery</li>
+				<li>Bootstrap</li>
+				<li>React</li>
+			</ul>
+			</div>
 		
-		<p>These are just casual notes.</p>
-		<h3>Quick intro to password security</h3>
-		<p>There are many well known companies that have had there users passwords exposed, sometimes being found availble on torrent sites like piratebay, much to the horror of their customers. A lot of the time companies even store the passwords in plain text: that is that they are just plonked in a database like a normal string, so that anyone with access can read them. </p>
-
-		<p>A basic level of security is encryption by a Hash function. Hashing is the use of an algorithm that processes the users password irreversably into a long unique string, that string is then stored in the database instead. Now anyone with access to the database would just see jibberish in the passwords column. There are different algorithms for Hash functions and some are bettter than others at coping with what is known as a brute force attack: this is where every possible password combination is tried until the correct one is reached . Md5 and Bcrypt are two diffent algorithms. Md5 produces its hash much faster (it uses less computing power). Now if someone is trying to brute force the Md5 hash they will find the password much quicker as oppoosed to a bcrypt hash.</p>
-
-		<p>A brute force attack can require a lot of computing power and can take a long time for hackers, becuase of this, instead of trying to generate a matching hash for each possible password, hackers have made databases called  "Rainbow tables" that have a premade list of passwords and their corresponding hashes. Trying these precomputed hashes greatly speeds up a brute force attack and in response normal hashes have been supplanted by 'Salted' hashes. </p>
-
-		<p>Salting is the act of adding a random, user unique, string to their password before hashing. This makes the password in effect longer and more complicated. That often means an attack via Rainbow tables is often too time consuming and expensive for hackers becuase their tables are not extensive enough. A Salted hash is current best practice and bcrypt is a poplular recommended algorithm to use.  </p>
-		 
+		<div class='headline_container'>
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='educationScrollTo'>Education</h2></a>
+		</div>
+		<div class='content_section' id='education_content_section'>
+			<p><span class='bold'>Open University:</span> BSc Computing and IT (2016 - Present Part-time)</p>
+			<p><span class='bold'>University of Bath:</span> BSc Natural Sciences [Biochem Major] (2014-2016, Only first year completed)</p>
+			<p><span class='bold'>Bedford Sixth Form:</span> A-levels A*A*A/A (2012-2014)</p>
+		</div>
+		<div class='headline_container'>
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='workScrollTo'>Work Examples</h2></a>
+		</div>
+		<div class='content_section' id='work_content_section'>
+			<a href='http://grabellastud.co.uk' target='_blank'><span class='underline'><p>Small Business Webpage</p></span><img src='newTab.png' alt='New tab' width='16px' height='16px' style='margin:25px 0 0 10px'><a>
+		</div>		
+		<div class='headline_container'>	
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='notesScrollTo'>Notes</h2></a>
+		</div>
 		
+		<div class='content_section' id='notes_content_section'>
+			<p>These are just casual notes.</p>
+			<h3>Quick intro to password security</h3>
+			<p>There are many well known companies that have had there users passwords exposed, sometimes being found availble on torrent sites like piratebay, much to the horror of their customers. A lot of the time companies even store the passwords in plain text: that is that they are just plonked in a database like a normal string, so that anyone with access can read them. </p>
+
+			<p>A basic level of security is encryption by a Hash function. Hashing is the use of an algorithm that processes the users password irreversably into a long unique string, that string is then stored in the database instead. Now anyone with access to the database would just see jibberish in the passwords column. There are different algorithms for Hash functions and some are bettter than others at coping with what is known as a brute force attack: this is where every possible password combination is tried until the correct one is reached . Md5 and Bcrypt are two diffent algorithms. Md5 produces its hash much faster (it uses less computing power). Now if someone is trying to brute force the Md5 hash they will find the password much quicker as oppoosed to a bcrypt hash.</p>
+
+			<p>A brute force attack can require a lot of computing power and can take a long time for hackers, becuase of this, instead of trying to generate a matching hash for each possible password, hackers have made databases called  "Rainbow tables" that have a premade list of passwords and their corresponding hashes. Trying these precomputed hashes greatly speeds up a brute force attack and in response normal hashes have been supplanted by 'Salted' hashes. </p>
+
+			<p>Salting is the act of adding a random, user unique, string to their password before hashing. This makes the password in effect longer and more complicated. That often means an attack via Rainbow tables is often too time consuming and expensive for hackers becuase their tables are not extensive enough. A Salted hash is current best practice and bcrypt is a poplular recommended algorithm to use.  </p>
+		</div>	 
 		
-		<a><h2 id='contactScrollTo'>Contact</h2></a>
-		<p>Address:<br>Janus House<br>Earning Street<br>Godmanchester<br>Cambridgeshire<br>PE29 2JD</p>
-		<p>Mobile: 07739525546</p>
-		<p>Email: cl@charlielynch.co.uk</p>
-	
+		<div class='headline_container'>
+			<img src='chevron-down.png' alt='open'>
+			<a><h2 id='contactScrollTo'>Contact</h2></a>
+		</div>
+		<div class='content_section' id='contact_content_section'>
+			<p>Address:<br>Janus House<br>Earning Street<br>Godmanchester<br>Cambridgeshire<br>PE29 2JD</p>
+			<p>Mobile: 07739525546</p>
+			<p>Email: cl@charlielynch.co.uk</p>
+		</div>
 	</div>
 	<footer>
 	</footer>
+	<script src='smoothScrollpolyfill.js' type='text/javascript'></script>
 	<script>
+	
+
 		window.onscroll=navScroll;
-		window.onhashchange = function(){
-			document.getElementsByTagName('nav')[0].style.top=0;
-			console.log(window.location.hash.substring(1)+'ScrollTo');
-			document.querySelector(window.location.hash+'ScrollTo').scrollIntoView({behavior: "smooth"});
-			};
 
 		document.getElementsByTagName('nav')[0].style.top =(window.innerHeight/2)-(window.pageYOffset/2)	
+		
 		function navScroll(){
 			if  (document.getElementsByTagName('nav')[0].style.top.substring(0,1)=='-' && window.pageYOffset>window.innerHeight){
 					document.getElementsByTagName('nav')[0].style.top=0;
@@ -125,12 +149,41 @@
 		
 		
 		
+		document.querySelector('nav ul').addEventListener('click', scrollToSection, false);
 		
-
+		function scrollToSection(e){
+			if (e.currentTarget != e.target){
+				document.querySelector('#'+e.target.id+'ScrollTo').scrollIntoView({behavior: "smooth"})
+			}
+		}
+		
+		document.querySelector('#down_scroller').addEventListener('click', function(){
+			document.querySelector('#aboutScrollTo').scrollIntoView({behavior: "smooth"})
+		});
+		
 	</script>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
 	<script>
+	//show hide content script
+	
+	var clickListeners = document.querySelectorAll('.headline_container');
+	
+	for (i = 0; i < clickListeners.length; i++) {
+		clickListeners[i].addEventListener('click', showHider);
+		}
+		
+	function showHider(e){
+	
+	console.log(e.currentTarget.nextSibling.nextSibling)
+	console.log(e.currentTarget.nextSibling.nextSibling.style.display);
+		if (e.currentTarget.nextSibling.nextSibling.style.display=='none'){
+			e.currentTarget.nextSibling.nextSibling.style.display='block';
+		} else {
+			e.currentTarget.nextSibling.nextSibling.style.display='none';
+		}
+	}
+	
 	</script>
+	
 </body>
