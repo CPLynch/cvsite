@@ -1,7 +1,7 @@
 .hide {
    position: absolute !important;
-   top: -9999px !important;
-   left: -9999px !important;
+   top: -0px !important;
+   left: -0px !important;
 }
 *{
 	font-weight:400;
