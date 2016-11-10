@@ -88,6 +88,7 @@ h2{
 }
 .headline_container img{
 	display:none;
+	cursor:pointer;
 }
 p{
 	padding:10px 0;
