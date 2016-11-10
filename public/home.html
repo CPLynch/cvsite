@@ -31,14 +31,14 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='aboutScrollTo'>About</h2></a>
 		</div>
-		<div class='content_section' id='about_content_section'>
+		<div class='content_section hide' id='about_content_section'>
 			<p>Thanks for taking a look at my online resume.</p>
 			<p>Hello, I'm Charlie. I am a Junior Developer that specialises in Javascript and Node.js.
 			I am capable of breaking down the big problems into simple manageable tasks, of reading others
 			code, and have the soft skills to work well in a team. I learn fast and am confident that I will
 			add value to a company as a Junior Developer.
 			</p>
-
+			<p>
 	 am capable of solving simple problems by myself. I can break problems into smaller, more manageable problems,
 	 which I can deal with on my own. I’m comfortable reading code I didn’t write, and I’m comfortable working on
 	 a team, knowing I won’t step on anyone’s toes, and if I do, I know how to work it out with them. This is something 
@@ -48,6 +48,7 @@
 			I'm Charlie, I like to develop web apps in Javascript. I have a sound base of 
 			knowledge that covers both the front end and back end. I am a fan of node and want 
 			to work on challenging projects using it.
+			</p>
 			</div>
 
 		
@@ -56,7 +57,7 @@
 			<a><h2 id='abilitiesScrollTo'>Abilities</h2></a>
 		</div>
 		
-		<div class='content_section' id='abilities_content_section'>
+		<div class='content_section hide' id='abilities_content_section'>
 			<p>Things I know:</p>
 			<ul>
 				<li>HTML5, HTML4/XHTML</li>
@@ -84,7 +85,7 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='educationScrollTo'>Education</h2></a>
 		</div>
-		<div class='content_section' id='education_content_section'>
+		<div class='content_section hide' id='education_content_section'>
 			<p><span class='bold'>Open University:</span> BSc Computing and IT (2016 - Present Part-time)</p>
 			<p><span class='bold'>University of Bath:</span> BSc Natural Sciences [Biochem Major] (2014-2016, Only first year completed)</p>
 			<p><span class='bold'>Bedford Sixth Form:</span> A-levels A*A*A/A (2012-2014)</p>
@@ -93,15 +94,17 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='workScrollTo'>Work Examples</h2></a>
 		</div>
-		<div class='content_section' id='work_content_section'>
-			<a href='http://grabellastud.co.uk' target='_blank'><span class='underline'><p>Small Business Webpage</p></span><img src='newTab.png' alt='New tab' width='16px' height='16px' style='margin:25px 0 0 10px'><a>
-		</div>		
+		<div class='content_section hide' id='work_content_section'>
+			<p><span class='underline'><a href='http://grabellastud.co.uk' target='_blank'>Small Business Webpage</a></span></p>	
+		</div>	
+	
+	
 		<div class='headline_container'>	
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='notesScrollTo'>Notes</h2></a>
-		</div>
+		</div>	
 		
-		<div class='content_section' id='notes_content_section'>
+		<div class='content_section hide' id='notes_content_section'>
 			<p>These are just casual notes.</p>
 			<h3>Quick intro to password security</h3>
 			<p>There are many well known companies that have had there users passwords exposed, sometimes being found availble on torrent sites like piratebay, much to the horror of their customers. A lot of the time companies even store the passwords in plain text: that is that they are just plonked in a database like a normal string, so that anyone with access can read them. </p>
@@ -117,7 +120,7 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='contactScrollTo'>Contact</h2></a>
 		</div>
-		<div class='content_section' id='contact_content_section'>
+		<div class='content_section hide' id='contact_content_section'>
 			<p>Address:<br>Janus House<br>Earning Street<br>Godmanchester<br>Cambridgeshire<br>PE29 2JD</p>
 			<p>Mobile: 07739525546</p>
 			<p>Email: cl@charlielynch.co.uk</p>
@@ -165,25 +168,23 @@
 	
 	
 	<script>
-	//show hide content script
-	
+
 	var clickListeners = document.querySelectorAll('.headline_container');
 	
 	for (i = 0; i < clickListeners.length; i++) {
 		clickListeners[i].addEventListener('click', showHider);
 		}
 		
+	
+		
 	function showHider(e){
 	
-	console.log(e.currentTarget.nextSibling.nextSibling)
-	console.log(e.currentTarget.nextSibling.nextSibling.style.display);
-		if (e.currentTarget.nextSibling.nextSibling.style.display=='none'){
-			e.currentTarget.nextSibling.nextSibling.style.display='block';
+		if ( (" " + e.currentTarget.nextSibling.nextSibling.className + " ").replace(/[\n\t]/g, " ").indexOf(" hide ") > -1 ){
+			e.currentTarget.nextSibling.nextSibling.classList.remove('hide')
 		} else {
-			e.currentTarget.nextSibling.nextSibling.style.display='none';
+			e.currentTarget.nextSibling.nextSibling.classList.add('hide')
 		}
 	}
-	
 	</script>
 	
 </body>
