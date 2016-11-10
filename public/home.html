@@ -172,7 +172,8 @@
 	var clickListeners = document.querySelectorAll('.headline_container');
 	
 	for (i = 0; i < clickListeners.length; i++) {
-		clickListeners[i].addEventListener('click touchstart', showHider);
+		clickListeners[i].addEventListener('click', showHider);
+		clickListeners[i].addEventListener('touchstart', showHider);
 		}
 		
 	
