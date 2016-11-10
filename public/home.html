@@ -180,9 +180,11 @@
 	function showHider(e){
 	
 		if ( (" " + e.currentTarget.nextSibling.nextSibling.className + " ").replace(/[\n\t]/g, " ").indexOf(" hide ") > -1 ){
-			e.currentTarget.nextSibling.nextSibling.classList.remove('hide')
+			e.currentTarget.nextSibling.nextSibling.classList.remove('hide');
+			alert('show');
 		} else {
-			e.currentTarget.nextSibling.nextSibling.classList.add('hide')
+			e.currentTarget.nextSibling.nextSibling.classList.add('hide');
+			alert('hide');
 		}
 	}
 	</script>
