@@ -31,7 +31,7 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='aboutScrollTo'>About</h2></a>
 		</div>
-		<div class='content_section' id='about_content_section'>
+		<div class='content_section hide' id='about_content_section'>
 			<p>Thanks for taking a look at my online resume.</p>
 			<p>Hello, I'm Charlie. I am a Junior Developer that specialises in Javascript and Node.js.
 			I am capable of breaking down the big problems into simple manageable tasks, of reading others
@@ -173,7 +173,6 @@
 	
 	for (i = 0; i < clickListeners.length; i++) {
 		clickListeners[i].addEventListener('click', showHider);
-		clickListeners[i].nextSibling.nextSibling.classList.remove('hide');
 		}
 		
 	
@@ -181,11 +180,9 @@
 	function showHider(e){
 	
 		if ( (" " + e.currentTarget.nextSibling.nextSibling.className + " ").replace(/[\n\t]/g, " ").indexOf(" hide ") > -1 ){
-			e.currentTarget.nextSibling.nextSibling.classList.remove('hide');
-			alert('show');
+			e.currentTarget.nextSibling.nextSibling.classList.remove('hide')
 		} else {
-			e.currentTarget.nextSibling.nextSibling.classList.add('hide');
-			alert('hide');
+			e.currentTarget.nextSibling.nextSibling.classList.add('hide')
 		}
 	}
 	</script>
