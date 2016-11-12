@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Map GeoJson Polygon Drawer</title>
+<link rel="stylesheet" type="text/css" href="../cvsite.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href='map.css' rel='stylesheet'>
+<link rel="icon" type="image/png" href="../js.ico" sizes="32x32">
+
+
+</head>
+
+<body>
+
+	<div id='map_container'>
+	
+	<div id="map_canvas">
+		
+		<div id='map_top_bar'>
+		
+			<div id='reset'>
+				<p>Reset</p>
+			</div>
+			
+			<div id="draw"><a href="#">Click to start new polygon</a></div>
+			
+			<div id='settings_div'>
+				<p>Polygon Precision (low to high)</p>
+				<ul id='map_settings'>
+					<li id='s1'>1</li>
+					<li id='s2'>2</li>
+					<li id='s3' class='selected_setting'>3</li>
+					<li id='s4'>4</li>
+					<li id='s5'>5</li>
+					<li id='s6'>6</li>
+			</div>
+			
+			
+		</div>
+		
+	</div>
+	
+	<div id='postcode_container'>
+		<h3>Postcode tester</h3>
+		<input placeholder='Enter a postcode' id='postcode_input'>
+		<p>Click to see if this postcode is within the polygon bounds</p>
+		<button id='postcode_test' >Test</button>
+	</div>
+
+	<div id='geojson_container'>
+		<p id='numPoints'><span class='bold'>GeoJSON -</span> Number of Points Plotted:</p>
+		<p id='geoJson'></p>
+	</div>
+	
+	
+	
+	
+	
+</div>
+			
+
+<script 
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXnxtTWDNr5YEcV9QSyxvbAfDhDV3pPXY&callback=initMap" async defer>
+</script>
+<script type="text/javascript" src='wherewolf.js'></script>
+<script type="text/javascript" src='map.js'></script>
+</body>

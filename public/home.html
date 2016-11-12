@@ -1,7 +1,9 @@
 <html>
 <head>
+<title>Charlie Lynch | Javascript Developer</title>
 <link rel="stylesheet" type="text/css" href="cvsite.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="icon" type="image/png" href="js.ico" sizes="32x32">
+
 
 </head>
 
@@ -31,8 +33,10 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='aboutScrollTo'>About</h2></a>
 		</div>
-		<div class='content_section hide' id='about_content_section'>
+		<div class='content_section ' id='about_content_section'>
 			<p>Thanks for taking a look at my online resume.</p>
+			
+			
 			<p>Hello, I'm Charlie. I am a Junior Developer that specialises in Javascript and Node.js.
 			I am capable of breaking down the big problems into simple manageable tasks, of reading others
 			code, and have the soft skills to work well in a team. I learn fast and am confident that I will
@@ -49,6 +53,9 @@
 			knowledge that covers both the front end and back end. I am a fan of node and want 
 			to work on challenging projects using it.
 			</p>
+			<p>If you have any feedback you would be able to give please send it to cl@charlielynch.co.uk, I would appreciate it, Thanks.</p> 
+			<p>(<span class='bold'>Note:</span> If you are viewing this on chrome for android there is a bug when the address bar hides causing jumpy scrolling, you can see my hack around this in the source, although it is commented out at the moment. This has been fixed as of ChromeFA M56)</p> 
+			
 			</div>
 
 		
@@ -57,8 +64,8 @@
 			<a><h2 id='abilitiesScrollTo'>Abilities</h2></a>
 		</div>
 		
-		<div class='content_section hide' id='abilities_content_section'>
-			<p>Things I know:</p>
+		<div class='content_section ' id='abilities_content_section'>
+			<p>Things I am familiar with:</p>
 			<ul>
 				<li>HTML5, HTML4/XHTML</li>
 				<li>CSS3</li>
@@ -71,11 +78,10 @@
 				<li>AJAX</li>
 			</ul>
 			
-			<p>Things I've dabbled in:</p>
+			<p>Things I am half familiar with:</p>
 			<ul>
 				<li>MongoDB</li>
 				<li>ES6</li>
-				<li>JQuery</li>
 				<li>Bootstrap</li>
 				<li>React</li>
 			</ul>
@@ -85,7 +91,7 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='educationScrollTo'>Education</h2></a>
 		</div>
-		<div class='content_section hide' id='education_content_section'>
+		<div class='content_section ' id='education_content_section'>
 			<p><span class='bold'>Open University:</span> BSc Computing and IT (2016 - Present Part-time)</p>
 			<p><span class='bold'>University of Bath:</span> BSc Natural Sciences [Biochem Major] (2014-2016, Only first year completed)</p>
 			<p><span class='bold'>Bedford Sixth Form:</span> A-levels A*A*A/A (2012-2014)</p>
@@ -94,8 +100,12 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='workScrollTo'>Work Examples</h2></a>
 		</div>
-		<div class='content_section hide' id='work_content_section'>
-			<p><span class='underline'><a href='http://grabellastud.co.uk' target='_blank'>Small Business Webpage</a></span></p>	
+		<div class='content_section ' id='work_content_section'>
+			
+			<h3><a href='map/map.html' target='_blank'><span class='underline'>Get GeoJSON from drawing on Google Maps<span></a> (not mobile ready)<img class='chev' src='newTab.png' alt='open'></h3>
+			
+			<h3><span class='underline bold'><a href='http://grabellastud.co.uk' target='_blank'>Simple Small Business Webpage</a></span><img class='chev spin_transform' src='newTab.png' alt='open'></h3>
+		
 		</div>	
 	
 	
@@ -104,7 +114,7 @@
 			<a><h2 id='notesScrollTo'>Notes</h2></a>
 		</div>	
 		
-		<div class='content_section hide' id='notes_content_section'>
+		<div class='content_section ' id='notes_content_section'>
 			<p>These are just casual notes.</p>
 			<h3>Quick intro to password security</h3>
 			<p>There are many well known companies that have had there users passwords exposed, sometimes being found availble on torrent sites like piratebay, much to the horror of their customers. A lot of the time companies even store the passwords in plain text: that is that they are just plonked in a database like a normal string, so that anyone with access can read them. </p>
@@ -120,10 +130,10 @@
 			<img src='chevron-down.png' alt='open'>
 			<a><h2 id='contactScrollTo'>Contact</h2></a>
 		</div>
-		<div class='content_section hide' id='contact_content_section'>
-			<p>Address:<br>Janus House<br>Earning Street<br>Godmanchester<br>Cambridgeshire<br>PE29 2JD</p>
-			<p>Mobile: 07739525546</p>
-			<p>Email: cl@charlielynch.co.uk</p>
+		<div class='content_section ' id='contact_content_section'>
+			<p><span class='bold'>Address:</span><br>Janus House<br>Earning Street<br>Godmanchester<br>Cambridgeshire<br>PE29 2JD</p>
+			<p><span class='bold'>Mobile:</span> 07739525546</p>
+			<p><span class='bold'>Email:</span> cl@charlielynch.co.uk</p>
 		</div>
 	</div>
 	<footer>
@@ -168,13 +178,33 @@
 	
 	
 	<script>
+	
+	function mobilecheck() {
+		  var check = false;
+		  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+		  return check;
+		};
 
 	var clickListeners = document.querySelectorAll('.headline_container');
 	
-	for (i = 0; i < clickListeners.length; i++) {
-		clickListeners[i].addEventListener('click', showHider);
-		}
-		
+
+	function screenSizeChanges(){
+			console.log('mobile');
+			for (i = 0; i < clickListeners.length; i++) {
+				if (window.matchMedia('screen and (max-device-width: 640px)').matches){
+					clickListeners[i].nextSibling.nextSibling.classList.add('hide');
+					clickListeners[i].addEventListener('click', showHider);
+				} else {
+					clickListeners[i].nextSibling.nextSibling.classList.remove('hide');
+					clickListeners[i].removeEventListener('click', showHider);
+				}
+			}
+	}
+	
+	
+	screenSizeChanges();
+	
+	window.onresize = screenSizeChanges;
 	
 		
 	function showHider(e){
@@ -191,7 +221,8 @@
 	<script>
 		//address bar mobile - backgrnd 100% - fix ;
 		
-		/* doesnt work well ------------ commented out
+		/* This problem seems to be only google chrome for android and chromium have said it IS a bug and is patched for new
+			versions of the browser, any way this fix doesnt work too well ------------ commented out
 		
 		function mobilecheck() {
 		  var check = false;
@@ -211,8 +242,6 @@
 		var viewWidth = window.innerWidth;
 		alert(window.innerWidth)
 		window.onresize = function(event) {
-			alert(window.innerWidth);
-			alert(window.innerHeight)
 			if (window.innerWidth != viewWidth){
 				document.querySelector('#background_top').style.height='100%'
 				viewWidth = window.innerWidth;
@@ -222,4 +251,6 @@
 		document.addEventListener("DOMContentLoaded", mobileheightfix)
 		*/
 	</script>
+	
+	
 </body>
