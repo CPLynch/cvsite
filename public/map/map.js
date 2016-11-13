@@ -263,8 +263,8 @@ document.getElementById('reset').onclick=function(){
 		httpRequest.onreadystatechange= function(){
 			if(httpRequest.readyState == 4){
 				var parsedResponse = JSON.parse(httpRequest.response)
-				console.log(parsedResponse);
-				if(!parsedResponse.status==200){
+				console.log('Status: '+parsedResponse.status);
+				if(parsedResponse.status!=200){
 					document.querySelector('#postcode_container p').innerHTML='Cant find Postcode!';
 					return;
 				}	else if(!geoJsonObj){
@@ -290,3 +290,4 @@ document.getElementById('reset').onclick=function(){
 		
 		
 	})
+	
