@@ -191,10 +191,9 @@
 			}
 	}
 	
-	
+	window.matchMedia('screen and (max-device-width: 640px)').addListener(screenSizeChanges);
 	screenSizeChanges();
 	
-	window.onresize = screenSizeChanges;
 	
 		
 	function showHider(e){
