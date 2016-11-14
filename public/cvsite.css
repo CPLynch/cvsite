@@ -5,9 +5,8 @@
 
 
 .hide {
-   position: absolute !important;
-   top: -9999px !important;
-   left: -9999px !important;
+	max-height:0px !important;
+	overflow:hidden !important;
 }
 #note {
 	font-size:0.7em;
@@ -97,8 +96,8 @@ h2{
 	text-decoration:underline;
 }
 h3{
-	font-size:24px;
-	margin:20px 0;
+	font-size:26px;
+	margin:40px 0 15px 0;
 }
 .chev{
 	height:16px;
@@ -114,7 +113,7 @@ p{
 	padding:10px 0;
 }
 h3{
-	font-size:16px;
+	font-size:20px;
 	font-weight:bold;
 }
 
@@ -135,7 +134,7 @@ footer{
 
 
  
-@media screen and (max-device-width: 640px) {
+@media screen and (max-device-width: 686px) {
 
 
 
@@ -194,8 +193,18 @@ h2{
 h3{
 	font-size: 4.2vh;
 }
+.content_section{
+	max-height:4000px;
+	  -webkit-transition: max-height 0.5s; 
+  -moz-transition: max-height 0.5s; 
+  -ms-transition: max-height 0.5s; 
+  -o-transition: max-height 0.5s; 
+  transition: max-height 0.5s; 
+}
 .content_section *{
 	font-size:4.2vh;
+	-webkit-transition: height 2s;
+    transition: height 2s;
 }
 
 footer{

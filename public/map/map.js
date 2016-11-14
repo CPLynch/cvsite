@@ -1,4 +1,4 @@
-var geoJsonObj;
+
 
 //Start of Sensitivity Section Logic
 var sensitivitySettings = {
@@ -28,6 +28,8 @@ var sensitivitySettings = {
     },
 }
 var sensitivitySetTo = sensitivitySettings.s3;
+
+var geoJsonObj;
 
 document.querySelector('#map_settings').addEventListener('click', function(e) {
         var ulChildren = e.currentTarget.children;
