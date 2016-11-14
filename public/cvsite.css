@@ -1,12 +1,10 @@
 
-.spin_transform{
-	transform:rotate(0,5)
-}
 
 
 .hide {
-	max-height:0px !important;
-	overflow:hidden !important;
+	position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 #note {
 	font-size:0.7em;
