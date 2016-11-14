@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>How to always find what the this keyword</title>
+<link rel="stylesheet" type="text/css" href="cvsite.css">
+<link rel="icon" type="image/png" href="js.ico" sizes="32x32">
+
+
+</head>
+
+<body>
+		<div id='container' class='mob'>
+			<h2>How to always find what the this keyword</h3>
+			
+			<p>Examine the call site and apply the following rules from the spec:</p>
+
+			<p>4. Default binding - if your in strict mode the this keyword defaults to undefined, if not in strict mode it defualts to the global variable.</p>
+
+			<p>3. Implicit Binding - When a function is called via an object property reference (ie. object.property();) then that object becomes the this keyword.</p>
+
+			<p>2. Explicit Binding - When using .bind() .call() or .apply() somewhere in the call stack they take an argument that is used as the this keyword.</p>
+
+			<p>1. The New keyword - if the function is called with the new keyword use that object as this. The new keyword overrides hard binding.</p>
+					<img src='this keyword flowchart.png' style='width:100%;'>
+			<p></p>
+			<p></p>
+		</div>
+</body>
+
+

@@ -15,13 +15,13 @@
 	font-weight:400;
 	text-decoration:none;
 	color:black;
-	font-size:16px;
 	font-family: 'Roboto', sans-serif;
 	-webkit-text-size-adjust: 100%
 }
 
 body{
 	margin:0;
+	font-size:16px;
 }
 	
 	
@@ -194,7 +194,7 @@ h3{
 	font-size: 4.2vh;
 }
 .content_section{
-	max-height:15000px;
+	max-height:5000px;
 	  -webkit-transition: max-height 0.5s; 
   -moz-transition: max-height 0.5s; 
   -ms-transition: max-height 0.5s; 
@@ -212,10 +212,9 @@ footer{
 }
 
 
-
-
-
-
+.mob p{
+font-size:4vh;
+}
 
 
 
