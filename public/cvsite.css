@@ -2,9 +2,9 @@
 
 
 .hide {
-	position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
+	max-height:0px !important;
+	overflow:hidden !important;
+	
 }
 #note {
 	font-size:0.7em;
