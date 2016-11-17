@@ -1,38 +1,42 @@
-
-
-//Start of Sensitivity Section Logic
-var sensitivitySettings = {
-    s1: {
-        angle: 2.81,
-        length: 5000,
-    },
-    s2: {
-        angle: 2.83,
-        length: 2000,
-    },
-    s3: {
-        angle: 2.85,
-        length: 1000,
-    },
-    s4: {
-        angle: 2.89,
-        length: 500,
-    },
-    s5: {
-        angle: 2.93,
-        length: 150,
-    },
-    s6: {
-        angle: 3.14,
-        length: 0,
-    },
-}
-var sensitivitySetTo = sensitivitySettings.s3;
+'use strict';
 
 var geoJsonObj;
+var map;
+var poly;
+
+//Start of Sensitivity Section Logic
+
+var sensitivitySettings = {
+			s1: {
+				angle: 2.81,
+				length: 5000,
+			},
+			s2: {
+				angle: 2.83,
+				length: 2000,
+			},
+			s3: {
+				angle: 2.85,
+				length: 1000,
+			},
+			s4: {
+				angle: 2.89,
+				length: 500,
+			},
+			s5: {
+				angle: 2.93,
+				length: 150,
+			},
+			s6: {
+				angle: 3.14,
+				length: 0,
+			},
+		}
+var sensitivitySetTo = sensitivitySettings.s3;
 
 document.querySelector('#map_settings').addEventListener('click', function(e) {
         var ulChildren = e.currentTarget.children;
+		
         for (var i = 0; i < ulChildren.length; i++) {
             ulChildren[i].classList.remove('selected_setting');
         }
@@ -40,7 +44,7 @@ document.querySelector('#map_settings').addEventListener('click', function(e) {
         sensitivitySetTo = sensitivitySettings[e.target.id];
         console.log(sensitivitySetTo)
     })
-    //End of Sensitivity Section Logic
+    //End of Sensitivity Section Logic ------------------------
 
 function initMap() {
     var mapOrigin = {
@@ -57,9 +61,9 @@ function initMap() {
         maxZoom: 15,
         noClear: true,
     });
-    var marker = new google.maps.Marker({
+    /*var marker = new google.maps.Marker({
         map: map
-    });
+    });*/
 
     function disable() {
         map.setOptions({
@@ -87,7 +91,7 @@ function initMap() {
             clickable: false
         });
         //move-listener
-        move = google.maps.event.addListener(map, 'mousemove', function(e) {
+        var move = google.maps.event.addListener(map, 'mousemove', function(e) {
             poly.getPath().push(e.latLng);
         });
         clickCounter++;
