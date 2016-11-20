@@ -1,6 +1,7 @@
 
 .hide {
 	max-height:0px !important;
+    opacity: 0 !important;
 	overflow:hidden !important;
 	
 }
@@ -169,7 +170,7 @@ nav{
 main{
 	width:86%;
 	min-width: 600px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .headline_container {
@@ -197,12 +198,14 @@ h3{
 	font-size: 4.2vh;
 }
 .content_section{
+    opacity: 1;
 	max-height:5000px;
-	  -webkit-transition: max-height 0.5s; 
-  -moz-transition: max-height 0.5s; 
-  -ms-transition: max-height 0.5s; 
-  -o-transition: max-height 0.5s; 
-  transition: max-height 0.5s; 
+	  -webkit-transition: max-height 0.5s, opacity 0.4s ease-in-out; 
+  -moz-transition: max-height 0.5s, opacity 0.4s ease-in-out; 
+  -ms-transition: max-height 0.5s, opacity 0.4s ease-in-out; 
+  -o-transition: max-height 0.5s, opacity 0.4s ease-in-out; 
+  transition: max-height 0.5s, opacity 0.4s ease-in-out; 
+    
 }
 .content_section *{
 	font-size:4.2vh;

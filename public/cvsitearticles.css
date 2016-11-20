@@ -132,17 +132,6 @@ footer{
 @media screen and (max-device-width: 686px) {
 
 
-
-h1{
-	font-size:160px;
-	margin:0;	
-	text-align:center;
-	position:relative;
-	top:14%;
-	opacity:1;
-	color:white;
-}
-
 nav{
 	display:none;
 }
@@ -162,7 +151,7 @@ nav{
 main{
 	width:86%;
 	min-width: 600px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .headline_container {
@@ -190,7 +179,7 @@ h3{
 	font-size: 4.2vh;
 }
 .content_section{
-	max-height:5000px;
+	max-height:4000px;
 	  -webkit-transition: max-height 0.5s; 
   -moz-transition: max-height 0.5s; 
   -ms-transition: max-height 0.5s; 
