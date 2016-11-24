@@ -1,38 +1,37 @@
 <!doctype html>
 <html>
+
 <head>
-<title>How to always find what the this keyword</title>
-<link rel="stylesheet" type="text/css" href="cvsitearticles.css">
-<link rel="icon" type="image/png" href="js.ico" sizes="32x32">
-<meta name='description' content='A quick and easy guide to finding the this keyword in javascript'>
+    <title>How to always find what the this keyword</title>
+    <link rel="stylesheet" type="text/css" href="cvsitearticles.css">
+    <link rel="icon" type="image/png" href="js.ico" sizes="32x32">
+    <meta name='description' content='A quick and easy guide to finding the this keyword in javascript'>
+    <meta charset="UTF-8">
 
 </head>
 
 <body>
-		<main class='mob'>
-            <article>
-                <h1>How to always find what the this keyword is.</h1>
+    <main class='mob'>
+        <article>
+            <h1>How to always find what the this keyword is.</h1>
 
-                <p>Examine the call site and apply the following rules from the spec:</p>
+            <p>Examine the call site and apply the following rules from the spec from low to high priority:</p>
+            <ol>
+                <li>Default binding - if your in strict mode the this keyword defaults to undefined, if not in strict mode it defualts to the global variable.</li>
+                <li>Implicit Binding - When a function is called via an object property reference (ie. object.property();) then that object becomes the this keyword.</li>
+                <li>Explicit Binding - When using .bind() .call() or .apply() somewhere in the call stack they take an argument that is used as the this keyword.</li>
+                <li>The New keyword - if the function is called with the new keyword use that object as this. The new keyword overrides hard binding.</li>
 
-                <p>4. Default binding - if your in strict mode the this keyword defaults to undefined, if not in strict mode it defualts to the global variable.</p>
+            </ol>
 
-                <p>3. Implicit Binding - When a function is called via an object property reference (ie. object.property();) then that object becomes the this keyword.</p>
+            <figure>
+                <img src='this keyword flowchart.png' style='width:100%;'>
+                <figcaption>Fig1. Flow chart to find the value of the this keyword in javascript.</figcaption>
+            </figure>
+        </article>
 
-                <p>2. Explicit Binding - When using .bind() .call() or .apply() somewhere in the call stack they take an argument that is used as the this keyword.</p>
-
-                <p>1. The New keyword - if the function is called with the new keyword use that object as this. The new keyword overrides hard binding.</p>
-                <figure>
-                    <img src='this keyword flowchart.png' style='width:100%;'>
-                    <figcaption>Fig1. Flow chart to find the value of the this keyword in javascript.</figcaption>
-                </figure>
-            </article>
-			
-		</main>
-        <footer></footer>
+    </main>
+    <footer></footer>
 </body>
-    
+
 </html>
-
-
-

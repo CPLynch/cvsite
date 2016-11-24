@@ -1,77 +1,79 @@
 <!doctype html>
 <html>
+
 <head>
-<title>How Git Works | An Overview</title>
-<link rel="stylesheet" type="text/css" href="cvsitearticles.css">
-<link rel="icon" type="image/png" href="js.ico" sizes="32x32">
-<meta name='description' content='Introduction and overview to Git'>
+    <title>How Git Works | An Overview</title>
+    <link rel="stylesheet" type="text/css" href="cvsitearticles.css">
+    <link rel="icon" type="image/png" href="js.ico" sizes="32x32">
+    <meta name='description' content='Introduction and overview to Git'>
 
 
 </head>
 
 <body>
-		<main class='mob'>
-			<article>
-                <h1>How Git Works</h1>
-                <p>
+    <main class='mob'>
+        <article>
+            <h1>How Git Works</h1>
+            <p>
                 At its core, Git is just a store for values and keys. Values being information (your files) as a series of bytes, keys being a pretty much unique representation of these values.
-                </p>
-                 <p>               
+            </p>
+            <p>
                 In Git keys are generated from the values using the SHA1 hash function. SHA1 was originally created for cryptographic purposes by the NSA in the US. It generates a 20 byte hash value in the form of 40 hexadecimal digits (4 bits each)
-                </p>
-                <p>               
-                You can see what SHA    1 hash is created from a particular piece of content using the Git hash-object command. The possibility of having one hash value the same as another is about 1 in 1e+48, so never going to happen.
-                </p>
-                <p>                          
+            </p>
+            <p>
+                You can see what SHA 1 hash is created from a particular piece of content using the Git hash-object command. The possibility of having one hash value the same as another is about 1 in 1e+48, so never going to happen.
+            </p>
+            <p>
                 Git init creates a new hidden sub directory. After that subdirectory is created the generated hash can be saved to it. By adding the -w flag to the hash-object command it saves the hash. You can pull the content back out of Git by using the cat-file command with the -p flag, this turns what is a blob back into a readable format.
-                </p>
-                <p>                
-                When you use the git add command you stage the added files for the next commit. Using git commit you get a hash value created for the committed files. If you git cat-file -p 	&#60theHashValue&#62 you get some metadata and another hash. This second hash represents tree of each file. If you cat-file again you will get yet more hash values this time for each file. Using cat file on these final hashes gives you the content for the files. The each hash value represents a Git object, the tree objects act like a file system directing towards the end files.
-                </p>
-                <p>                
+            </p>
+            <p>
+                When you use the git add command you stage the added files for the next commit. Using git commit you get a hash value created for the committed files. If you git cat-file -p &#60theHashValue&#62 you get some metadata and another hash. This second hash represents tree of each file. If you cat-file again you will get yet more hash values this time for each file. Using cat file on these final hashes gives you the content for the files. The each hash value represents a Git object, the tree objects act like a file system directing towards the end files.
+            </p>
+            <p>
                 When you modify a particular file in a directory when you generate a new hash it will be completely different to what it was previously. Inside the new hash will also be the parents hash (the hash value of the last commit). Within the tree objects Git will only create new hash values when the content within it has been changed if not it will point to the original hash values, reusing them. You can count the number of objects using the count-objects command. Git performs optimisations like this as well as sometimes storing only the changed parts of the file or compress multiple objects into one file, but this doesn't matter to the user, it is only for efficiency purposes.
-                </p>
-                <p>                
+            </p>
+            <p>
                 Git objects can be one of the following: a blob (contains data), a tree (helps direct to blobs), a commit (add versioning), or an annotated tag.
-                </p>
-                <p>                
+            </p>
+            <p>
                 An annotated tag is created with git tag -a. It allows you to simply write some sort of message in the form of a Git object. The are also light weight tags that attach to other Git objects.
-                </p>
-                <p>
+            </p>
+            <p>
                 Branches: Branches are just references to the SHA1 hash values of commits that have no descendants. Git, by default, creates a branch called master that the initial commit is on (there is nothing otherwise special about the master branch). You can see the list of branches by opening up the .git directory and going to /refs/heads. The files contained within it are each branch with the file name matching the branch name and if you open the file you will get the hash value for the last commit on that branch. New commits are always tracked by the current branch,
-                </p>
-                <p>                
-                To create a branch use git branch &#60newBranchName&#62. If you type git branch with no argument you will get a list of branches, the one that you  are currently on will be denoted by an asterisk. Git knows what branch you on by storing it as a reference in the HEAD file. Using git checkout	&#60branchName&#62 will change the HEAD file to point at that branch in refs/heads, which makes it the branch now in use.  When you make new commit the hash value within current branch file found in refs/heads changes from the previous (parent) commit hash to the new hash.
-                </p>
-                <p>                
+            </p>
+            <p>
+                To create a branch use git branch &#60newBranchName&#62. If you type git branch with no argument you will get a list of branches, the one that you are currently on will be denoted by an asterisk. Git knows what branch you on by storing it as a reference in the HEAD file. Using git checkout &#60branchName&#62 will change the HEAD file to point at that branch in refs/heads, which makes it the branch now in use. When you make new commit the hash value within current branch file found in refs/heads changes from the previous (parent) commit hash to the new hash.
+            </p>
+            <p>
                 A merge in Git is just another commit, only this commit has more than one parent. To merge use git merge &#60banchYouWantToMeregeWith&#62. If Git detects conflicts between the files it will require you to solve the conflicts manually. After that you commit just like normal (git add => git commit), this would be automatic if there were no conflicts.
-                </p>
-                <p>                
+            </p>
+            <p>
                 If branches have not diverged (no conflicts will exist) instead of creating a new commit with more than parent as in a normal merge, Git will 'fast-forward' the behind branch to immediately point to the sane SHA1 hash value as the one referenced to by the other branch.
-                </p>
-                <p>                
+            </p>
+            <p>
                 Git has the ability to go into a detached HEAD state. This makes a nameless branch. You can do this by using git checkout &#60commitHashValue&#62. This is useful for experimental commits as Git tracks the commits directly in its HEAD file. If you change back to another branch Git will eventually garbage collect the objects on the unnamed branch.
-                </p>
-                <p>                
+            </p>
+            <p>
                 Git has another command for dealing with multiple branches called rebase. Rebase is different to merge in that rather than multiple branches joining back together the branches are 'rearranged' into one longer branch. Git looks for the divergent point between the two branches and joins all the commits from that point on onto the other branch. The moved branches are actually copies of the original commits as new commits (and new hash values). Rebase may also fast-forward like in a merge. Upon a rebase the branch name moves over to the new commits so the old commits no longer have a branch name, eventually Git will garbage collect the old branch if it remains unnamed.
-                </p>
-                <p>                
-                    <span class='bold'>Merge VS Rebase:</span>
-                </p>
-                <p>                
+            </p>
+            <p>
+                <span class='bold'>Merge VS Rebase:</span>
+            </p>
+            <p>
                 Merge has the advantage of showing merge history, this can get complicated though in a project with a lot of merging. Rebasing allows you to make the history look simpler but you lose out on the merge history.
-                </p>
-                <p>
-                    <span class='bold'>Distribution: </span>
-                </p>
-                <p>
-                Working with remotes allows you to share projects between peoples computers, or cloud services like GitHub. You can add remotes (these will be recorded in the config file) with the git clone command (the takes the address of the remote repo as an argument), this makes a copy of the history of the project on your own computor that you can work on separately. If you make any commits they do not automatically update the remote. To do that the git push command is used. However, if in the mean time someone else has updated the remote with their own commit, you first have to resolve the changes (you can force the push command to override their changes with the -f flag but that's risky because it might affect other users). To update your local copy of the remote you use git fetch. You can then merge (or rebase but again this could cause problems) the two and push the result. There is a command that does both fetch and merge in a single go called pull. 
-                </p>
-                <p>
+            </p>
+            <p>
+                <span class='bold'>Distribution: </span>
+            </p>
+            <p>
+                Working with remotes allows you to share projects between peoples computers, or cloud services like GitHub. You can add remotes (these will be recorded in the config file) with the git clone command (the takes the address of the remote repo as an argument), this makes a copy of the history of the project on your own computor that you can work on separately. If you make any commits they do not automatically update the remote. To do that the git push command is used. However, if in the mean time someone else has updated the remote with their own commit, you first have to resolve the changes (you can force the push command to override their changes with the -f flag but that's risky because it might affect other users). To update your local copy of the remote you use git fetch. You can then merge (or rebase but again this could cause problems) the two and push the result. There is a command that does both fetch and merge in a single go called pull.
+            </p>
+            <p>
                 GitHub allows you to fork another users project. Git does not keep track of forking and looks at the original GitHub project and the forked one like they are separate, only GitHub tracks this. A pull request is a GitHub message asking from one user to another asking them to incorporate their own changes into that persons project.GitHub allows you to fork another users project. Git does not keep track of forking and looks at the original GitHub project and the forked one like they are seperate, only GitHub tracks this. A pull request is a GitHub message asking from one user to another asking them to incorperate their own changes into that persons project.
-                </p>               
-            </article>
-		</main>
-        <footer></footer>
+            </p>
+        </article>
+    </main>
+    <footer></footer>
 </body>
+
 </html>
