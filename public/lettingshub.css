@@ -201,3 +201,29 @@ body{
     width:360px;
   }
 }
+
+
+#spacer{
+  height:100px;
+}
+#strapline {
+  width:380px;
+  display:block;
+  position: relative;
+  left: 92px;
+  top:1px;
+}
+#strap-container {
+  width:0px;
+  overflow:hidden;
+  animation-name:strapline;
+  animation-fill-mode:forwards;
+  animation-delay:2.5s;
+  animation-duration:1.3s;
+}
+
+@keyframes strapline {
+  100%{
+    width:100%;
+  }
+}
