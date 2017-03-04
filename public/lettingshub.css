@@ -1,7 +1,7 @@
 #logo-wrapper{
   position:absolute;
   top: 20%;
-  left: 40%;
+  left: 20%;
   //background-color: rgba(1,200,2,0.2);
   animation-duration:2s;
   animation-name: fly;
