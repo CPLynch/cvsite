@@ -111,62 +111,62 @@ body{
 #logo-string img:nth-child(3){
   animation-delay:0.8s;
   position:relative;
-  right:7px; 
+  right:9px; 
 } 
 #logo-string img:nth-child(4){
   animation-delay:0.9s;
   position:relative;
-  right:3px; 
+  right:13px; 
 } 
 #logo-string img:nth-child(5){
   animation-delay:1s;
   position:relative;
-  right:9px; 
+  right:18px; 
 } 
 #logo-string img:nth-child(6){
   animation-delay:1.1s;
   position:relative;
-  right:11px; 
+  right:23px; 
 } 
 #logo-string img:nth-child(7){
   animation-delay:1.2s;
   position:relative;
-  right:16px; 
+  right:27px; 
 } 
 #logo-string img:nth-child(8){
   animation-delay:1.3s;
   position:relative;
-  right:21px; 
+  right:31px; 
 } 
 #logo-string img:nth-child(9){
   animation-delay:1.4s;
   position:relative;
-  right:26px; 
+  right:36px; 
 } 
 #logo-string img:nth-child(10){
   animation-delay:1.5s;
   position:relative;
-  right:30px; 
+  right:40px; 
 } 
 #logo-string img:nth-child(11){
   animation-delay:1.6s;
   position:relative;
-  right:35px; 
+  right:45px; 
 } 
 #logo-string img:nth-child(12){
   animation-delay:1.7s;
   position:relative;
-  right:40px; 
+  right:43px; 
 } 
 #logo-string img:nth-child(13){
   animation-delay:1.8s;
   position:relative;
-  right:45px; 
+  right:48px; 
 } 
 #logo-string img:nth-child(14){
   animation-delay:1.9s;
   position:relative;
-  right:50px; 
+  right:52px; 
   animation-name:flip-last;
   animation-duration:1.5s;
 }
